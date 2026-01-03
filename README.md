@@ -1,83 +1,32 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Fast Food Consumption & Health Impact Analysis\n",
-    "\n",
-    "## 📌 Project Overview\n",
-    "This project performs an Exploratory Data Analysis (EDA) on a dataset linking fast food consumption habits to health metrics such as BMI, Overall Health Score, and Digestive Issues. The goal was to identify if higher fast food frequency correlates with negative health outcomes in this specific population sample.\n",
-    "\n",
-    "## 📊 Dashboard\n",
-    "![Dashboard](images/dashboard.png)\n",
-    "*Figure 1: Comprehensive view of data distributions, relationships, and health metrics.*\n",
-    "\n",
-    "## 🔍 Key Findings\n",
-    "After rigorous statistical analysis and visualization, the following insights were derived from the dataset:\n",
-    "\n",
-    "1.  **Independence of Variables**: Contrary to general medical knowledge, this specific dataset shows **no significant linear correlation** between `Fast_Food_Meals_Per_Week` and `BMI` (Pearson correlation $\\approx -0.03$).\n",
-    "2.  **Health Score Anomaly**: Self-reported \"Overall Health Scores\" appeared consistent across all groups, regardless of fast food intake.\n",
-    "3.  **Data Quality Insight**: The lack of expected physiological correlations (e.g., Caloric Intake vs. BMI correlation is near zero) suggests this dataset may be **synthetic or randomized**. It serves as a case study in identifying data quality issues before building predictive models.\n",
-    "\n",
-    "## 🛠️ Methodology\n",
-    "The analysis was conducted using Python with the following steps:\n",
-    "1.  **Data Cleaning**: Checked for missing values and inconsistencies.\n",
-    "2.  **Univariate Analysis**: Plotted distributions for Age, BMI, and Fast Food frequency.\n",
-    "3.  **Bivariate Analysis**: Used scatter plots and box plots to test hypotheses (e.g., \"Does more fast food equal higher BMI?\").\n",
-    "4.  **Correlation Matrix**: Calculated Pearson correlation coefficients for all numerical features.\n",
-    "\n",
-    "## 💻 How to Run This Project\n",
-    "To reproduce the analysis, follow these steps:\n",
-    "\n",
-    "1.  **Clone the repository**\n",
-    "    ```bash\n",
-    "    git clone [https://github.com/yourusername/fast-food-analysis.git](https://github.com/yourusername/fast-food-analysis.git)\n",
-    "    cd fast-food-analysis\n",
-    "    ```\n",
-    "\n",
-    "2.  **Install Dependencies**\n",
-    "    ```bash\n",
-    "    pip install -r requirements.txt\n",
-    "    ```\n",
-    "\n",
-    "3.  **Run the Analysis Script**\n",
-    "    ```bash\n",
-    "    python analysis.py\n",
-    "    ```\n",
-    "\n",
-    "## 📂 Repository Structure\n",
-    "* `data/`: Contains the raw CSV file.\n",
-    "* `images/`: Generated plots and dashboards.\n",
-    "* `analysis.py`: Main Python script for EDA.\n",
-    "* `README.md`: Project documentation.\n",
-    "\n",
-    "## 📜 License\n",
-    "This project is open-source and available under the MIT License.\n"
-   ]
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3 (ipykernel)",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.13.1+"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 4
-}
+📋Summary of Analysis
+
+Project Objective
+The primary goal of this analysis was to investigate the relationship between fast food consumption frequency and various health metrics, specifically Body Mass Index (BMI), self-reported Overall Health Score, and the prevalence of digestive issues.
+
+Methodology
+Dataset: 800 records containing demographic data (Age, Gender), lifestyle habits (Fast Food frequency, Sleep, Activity), and health indicators (BMI, Digestive Issues).
+
+Tools: Python (Pandas for data manipulation, Seaborn/Matplotlib for visualization).
+
+Technique: Exploratory Data Analysis (EDA) including univariate distribution checks, bivariate correlation analysis (Pearson coefficient), and categorical grouping.
+
+Key Findings
+A. Fast Food vs. BMI (Body Mass Index)
+Hypothesis: Higher frequency of fast food meals leads to a higher BMI.
+
+Result: The analysis revealed no significant correlation (Pearson correlation \approx -0.03). The scatter plot shows a random distribution of data points, indicating that in this specific dataset, eating more fast food does not statistically predict a higher BMI.
+
+B. Impact on Perceived Health
+Hypothesis: Individuals eating more fast food will report lower "Overall Health Scores."
+
+Result: There was no observable trend. The correlation between Fast_Food_Meals_Per_Week and Overall_Health_Score was effectively zero (0.03). Participants eating 10+ fast food meals a week reported similar health scores to those eating 0-2 meals.
+
+C. Physiological Inconsistencies
+Observation: We analyzed the relationship between Average_Daily_Calories and BMI. Biologically, higher caloric intake is a primary driver of weight gain.
+
+Result: The correlation was near zero (0.04). This absence of a fundamental biological link suggests the data does not reflect real-world physiological patterns.
+
+Critical Conclusion & Data Quality Assessment
+Based on the lack of correlation between biologically linked variables (e.g., Calories vs. BMI, Fast Food vs. Health), it is highly probable that this dataset is synthetic (randomly generated) rather than collected from real human subjects.
+
+While the data served as an excellent resource for building an EDA pipeline and dashboarding, the specific health insights derived should not be treated as medically valid conclusions. Future analysis would require a dataset with validated medical records to draw accurate causal links.
