@@ -91,7 +91,7 @@ Launch Jupyter Notebook:
 ## 👩‍💻 Author
 **Abigael Damilola Ajala**  
 - Data Analyst | Healthcare Analytics  
-- LinkedIn: https://linkedin.com/in/abigael-ajala-b470b7198  
+- LinkedIn: https://linkedin.com/in/abigaelajala
 - GitHub: https://github.com/Littlsparkls  
 
 ---
